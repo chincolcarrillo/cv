@@ -1,0 +1,65 @@
+---
+title: CV
+name: Carolina
+surname: Carrillo
+position: "Estudiante de Sociología"
+email: "carolina.carrillo@ug.uchile.cl"
+github: chincolcarrillo
+linkedin: carolina-carrillo-devia
+date: "`r format(Sys.time(), '%B %Y')`"
+aboutme: "... no sé qué poner aquí ¿postulante a?"
+output: 
+  vitae::markdowncv:
+    theme: davewhipp
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+```
+
+## Formación
+
+```{r}
+library(tibble)
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where,
+  "Licenciatura, Sociología", "2019-2023", "Santiago, Chile", "Universidad de Chile"
+) %>% 
+  detailed_entries(Degree, Year, Institution, Where)
+```
+
+## Experiencias
+
+```{r}
+tribble(
+  ~Year, ~Type, ~Desc,
+  2021, "Análisis de Información Cualitativa", "Cátedra dictada por Macarena Bonhomme",
+  2021, "Estrategias de Investigación Cualitativa", "Cátedra dictada por Macarena Bonhomme"
+) %>% 
+  brief_entries(
+    glue::glue("Ayudante de Cátedra en {Type}"),
+    Year, 
+    Desc
+  )
+```
+
+## Aptitudes
+
+ * Investigación cualitativa y cuantitativa 
+ * Administración de referencias 
+ * Organización y trabajo en equipo 
+ * Inglés C1 y Francés B1 
+ 
+## Herramientas computacionales
+
+ * Análisis estadístico en R y reporte con RMarkdown
+ * Nivel de usuario ATLAS.ti 9
+ * Nivel de usuario Zotero
+ * Nivel avanzado Microsoft Office y Google Docs Editors
+ * Zoom Licensed
+
+## Recomendaciones
+
+Macarena Bonhomme. Profesora	 Adjunta,	 Departamento	 de	 Sociología,	 Universidad	 de Chile,	Santiago.	Investigadora	Postdoctoral COES.	E-mail:	<macarenabonhomme@gmail.com>
+
