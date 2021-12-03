@@ -1,7 +1,7 @@
 ---
 title: CV
 name: Carolina
-surname: Carrillo
+surname: Carrillo Devia
 position: "Estudiante de Sociología"
 email: "carolina.carrillo@ug.uchile.cl"
 github: chincolcarrillo
@@ -15,30 +15,53 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
-library(vitae)
 ```
+
+```{r paquetes, include=FALSE}
+# install.packages("pacman")
+# library(pacman)
+pacman::p_load(vitae, tibble)
+```
+
 
 ## Formación
 
-```{r}
-library(tibble)
+```{r formacion}
 tribble(
   ~ Degree, ~ Year, ~ Institution, ~ Where,
   "Licenciatura, Sociología", "2019-2023", "Santiago, Chile", "Universidad de Chile"
 ) %>% 
   detailed_entries(Degree, Year, Institution, Where)
 ```
+_Actividades y asociaciones:_ Consejo Asesor de la Oficina de Género FACSO, Vocera del Centro de Estudiantes de la Facultad de Ciencias Sociales 2020-2021, Centro de Estudiantes de Sociología 2019-2020, Sociedad de Debate Universidad de Chile.
 
-## Experiencias
 
-```{r}
+## Experiencias académicas
+
+```{r ayudantias}
 tribble(
   ~Year, ~Type, ~Desc,
+  2021, "Estadística Correlacional", "Cátedra dictada por Karina Rdz-Navarro",
   2021, "Análisis de Información Cualitativa", "Cátedra dictada por Macarena Bonhomme",
   2021, "Estrategias de Investigación Cualitativa", "Cátedra dictada por Macarena Bonhomme"
 ) %>% 
   brief_entries(
     glue::glue("Ayudante de Cátedra en {Type}"),
+    Year, 
+    Desc
+  )
+```
+
+## Otras experiencias
+
+```{r trabajo}
+tribble(
+  ~Year, ~Type, ~Desc,
+  2021, "Asistente Participación Ciudadana", "Apoyo en sistematización de resultados de talleres de participación ciudadana en Etapa de Diagnóstico del Plan Regulador Comunal de Lo Prado. Habiterra Consultores",
+  2021, "Transcriptora", "Transcripción de entrevistas a trabajadores de aplicaciones de delivery. Proyecto Fairwork en Chile, Universidad Adolfo Ibáñez"
+  ) %>% 
+  brief_entries(
+    Type,
     Year, 
     Desc
   )
@@ -51,13 +74,13 @@ tribble(
  * Organización y trabajo en equipo 
  * Inglés C1 y Francés B1 
  
-## Herramientas computacionales
+## Herramientas
 
- * Análisis estadístico en R y reporte con RMarkdown
- * Nivel de usuario ATLAS.ti 9
- * Nivel de usuario Zotero
- * Nivel avanzado Microsoft Office y Google Docs Editors
- * Zoom Licensed
+ * Manejo de bases de datos, visualización de datos y análisis estadístico en R
+ * Análisis cualitativo con ATLAS.ti 9
+ * Escritura en texto plano con R Markdown
+ * Manejo de referencias con Zotero y Mendeley
+ * Microsoft Office y Google Docs Editors
 
 ## Recomendaciones
 
